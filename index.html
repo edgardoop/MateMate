@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,19 @@
     <style>
         body {
             font-size: 20px;
-            background-image: url('conjunto de mandelbrot.jpg'); /* Ruta de la imagen guardada */
-            background-size: cover; /* Ajusta el tamaño para cubrir toda la página */
+            background-color: black;
+            background-image: url('conjunto de mandelbrot.jpg');
+            background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
             background-attachment: fixed;
             color: white;
             text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h1 {
             font-size: 48px;
@@ -25,7 +30,7 @@
             color: #ff6666;
         }
         a {
-            font-size: 28px;
+            font-size: 20px;
             color: hsl(282, 39%, 68%);
             text-decoration: none;
         }
@@ -37,18 +42,55 @@
             font-weight: bold;
             color: #ffffff;
         }
+        /* Contenedor flex para los recuadros */
+        .content-container {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        /* Estilos de los recuadros */
+        .link-box {
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%; /* Reduce el ancho de los recuadros */
+            background-color: #000000;
+            text-align: left;
+        }
+        /* Títulos de los recuadros */
+        .link-box h3 {
+            color: #ff6666;
+            font-size: 28px;
+            margin-top: 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <marquee><h1>Material</h1></marquee>
     <h2>una pequena compilacion :3</h2>
-    <ul>
-        <li><a href="https://euclid.uagro.mx/tzaloa-files" target="_blank">Tzaloas solo temas</a></li>
-        <li><a href="https://proyectomuro.com/" target="_blank">Proyecto Muro</a></li>
-        <li><a href="https://blog.nekomath.com/" target="_blank">El Blog de Leo</a></li>
-        <li><a href="https://sites.google.com/view/arilinsmathworld/inicio?authuser=0" target="_blank">Arilin's Math World</a></li>
-	<li><a href="Solucionario_OMM_Ari.pdf" target="_blank">SolucionariOMM</a></li>
-	<li><a href="AlgebraParaOlimpiadas.pdf" target="_blank">AlgebraParaOlimpiadas</a></li>
-    </ul>
+
+    <div class="content-container">
+        <!-- Recuadro de PDFs -->
+        <div class="link-box">
+            <h3>PDF's</h3>
+            <ul>
+                <li><a href="Solucionario_OMM_Ari.pdf" target="_blank">SolucionariOMM</a></li>
+                <li><a href="AlgebraParaOlimpiadas.pdf" target="_blank">AlgebraParaOlimpiadas</a></li>
+            </ul>
+        </div>
+
+        <!-- Recuadro de Páginas -->
+        <div class="link-box">
+            <h3>Páginas</h3>
+            <ul>
+                <li><a href="https://euclid.uagro.mx/tzaloa-files" target="_blank">Tzaloas solo temas</a></li>
+                <li><a href="https://proyectomuro.com/" target="_blank">Proyecto Muro</a></li>
+                <li><a href="https://blog.nekomath.com/" target="_blank">El Blog de Leo</a></li>
+                <li><a href="https://sites.google.com/view/arilinsmathworld/inicio?authuser=0" target="_blank">Arilin's Math World</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
